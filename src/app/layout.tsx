@@ -1,8 +1,9 @@
 'use client'
 
-import './globals.scss'
+import './globalStyle.scss'
 import type { Metadata } from 'next'
 import { NextUIProvider } from '@nextui-org/react'
+import Layout from '@/view/layout'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider>
+          <Layout component={children} />
+        </NextUIProvider>
       </body>
     </html>
   )
