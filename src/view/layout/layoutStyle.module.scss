@@ -1,0 +1,29 @@
+.layout {
+  @include flex($y: flex-start);
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-main;
+  &-side {
+    width: 260px;
+    flex-shrink: 0;
+    height: 100%;
+    padding: 40px 20px;
+  }
+  &-main {
+    width: 100%;
+    padding: 40px;
+    padding-left: 0;
+    height: 100%;
+    &-panel {
+      background-color: #fafafa;
+      height: 100%;
+      border-radius: 20px;
+      @include flex($dir: column);
+      &-child {
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
