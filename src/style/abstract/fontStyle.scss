@@ -1,0 +1,11 @@
+// 字体图标
+@font-face {
+  font-family: 'iconFont';
+  src: url('~/src/asset/iconFont/icomoon.eot?pctezb');
+  src: url('~/src/asset/iconFont/icomoon.eot?pctezb#iefix')
+      format('embedded-opentype'),
+    url('~/src/asset/iconFont/icomoon.ttf?pctezb') format('truetype'),
+    url('~/src/asset/iconFont/icomoon.woff?pctezb') format('woff'),
+    url('~/src/asset/iconFont/icomoon.svg?pctezb#icomoon') format('svg');
+  font-display: fallback;
+}
