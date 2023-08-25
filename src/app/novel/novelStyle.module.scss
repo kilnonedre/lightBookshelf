@@ -1,0 +1,38 @@
+.novel {
+  @include flex($dir: column);
+  height: 100%;
+  &-book {
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    &-outer {
+      display: grid;
+      padding: 10px;
+      max-width: 1350px;
+      @include respond-to('tv') {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      @include respond-to('desktop') {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @include respond-to('notebook') {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include respond-to('pad') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include respond-to('phone') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px 20px;
+      justify-items: center;
+    }
+  }
+  &-pagination {
+    // margin-left: 200px;
+    margin-top: 15px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+}

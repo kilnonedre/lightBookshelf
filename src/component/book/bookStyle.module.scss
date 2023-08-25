@@ -1,0 +1,56 @@
+.book {
+  cursor: pointer;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+  position: relative;
+  background-color: #ffffff;
+  &-cover {
+    width: 100%;
+    overflow: hidden;
+    img {
+      transition: 0.2s;
+      transform: scale(1);
+    }
+    &--hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &-title {
+    font-size: $font-size-sm;
+    font-weight: bold;
+    color: #000000;
+    margin: 5px 0;
+    padding: 0 5px;
+    @include omit($mtd: double);
+  }
+  &-misc {
+    font-size: $font-size-sm;
+    color: #adadad;
+    @include flex($x: space-between);
+    padding: 0 5px;
+  }
+  &-label {
+    position: absolute;
+    top: 6%;
+    right: -6px;
+    z-index: 99;
+    @include flex($x: flex-end, $wrap: wrap);
+    &-status {
+      background-color: #fd0081;
+      font-size: $font-size-sm;
+      text-align: center;
+      padding: 1px 10px;
+      font-weight: bold;
+      border-radius: 10px 0 0 10px;
+      width: 100%;
+      color: #ffffff;
+    }
+    &-corner {
+      width: 6px;
+      height: 2px;
+      background-color: #820042;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+  }
+}

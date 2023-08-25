@@ -4,15 +4,37 @@
   width: 100vw;
   background-color: $color-main;
   &-side {
-    width: 260px;
+    width: 20vw;
+    max-width: 260px;
     flex-shrink: 0;
     height: 100%;
     padding: 40px 20px;
+    background-color: $color-main;
+    @include respond-to('phone') {
+      position: absolute;
+      width: 260px;
+      left: -260px;
+      height: 100vh;
+      z-index: 999;
+    }
+    @include respond-to('pad') {
+      position: absolute;
+      width: 260px;
+      left: -260px;
+      height: 100vh;
+      z-index: 999;
+    }
   }
   &-main {
     width: 100%;
     padding: 40px;
     padding-left: 0;
+    @include respond-to('pad') {
+      padding: 20px;
+    }
+    @include respond-to('phone') {
+      padding: 10px;
+    }
     height: 100%;
     &-panel {
       background-color: #fafafa;
@@ -21,6 +43,7 @@
       @include flex($dir: column);
       &-child {
         overflow: auto;
+        overflow-x: hidden;
         height: 100%;
         width: 100%;
       }
