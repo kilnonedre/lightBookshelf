@@ -22,7 +22,7 @@
     color: #000000;
     margin: 5px 0;
     padding: 0 5px;
-    @include omit($mtd: double);
+    @include omit();
   }
   &-misc {
     font-size: $font-size-sm;

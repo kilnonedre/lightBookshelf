@@ -18,18 +18,11 @@
 }
 
 // 省略通用函数
-@mixin omit($mtd: single, $maxW: 100%, $maxR: 2) {
-  @if $mtd== 'single' {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: $maxW;
-  } @else {
-    -webkit-line-clamp: $maxR;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    overflow: hidden;
-  }
+@mixin omit($maxR: 2) {
+  -webkit-line-clamp: $maxR;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
 }

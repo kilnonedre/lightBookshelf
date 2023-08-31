@@ -1,0 +1,109 @@
+.overview {
+  @include flex($x: space-between, $y: stretch, $xGap: 20px, $yGap: 20px);
+  font-size: 0.75rem;
+  @include respond-to('tv') {
+    font-size: 0.875rem;
+  }
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  @include respond-to('tv') {
+    padding: 35px;
+  }
+  @include respond-to('desktop') {
+    padding: 35px;
+  }
+  @include respond-to('phone') {
+    flex-direction: column;
+  }
+  &-cover {
+    width: 200px;
+    @include respond-to('phone') {
+      width: 100%;
+    }
+    flex: 1;
+    @include respond-to('pad') {
+      flex: 1.25;
+    }
+    flex-shrink: 0;
+  }
+  &-message {
+    flex: 3;
+    @include flex($dir: column, $y: flex-start);
+    &-title {
+      font-size: 1rem;
+      @include respond-to('tv') {
+        font-size: 1.5rem;
+      }
+      font-weight: bold;
+      @include omit($maxR: 1);
+    }
+    &-creator {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    &-renew,
+    &-time {
+      color: #858583;
+    }
+    &-score {
+      &-collect,
+      &-word {
+        font-weight: bold;
+        font-size: 1rem;
+        @include respond-to('tv') {
+          font-size: 1.1rem;
+        }
+      }
+      &-collect {
+        margin-left: 20px;
+      }
+    }
+    &-button {
+      @include flex($x: flex-start, $xGap: 10px);
+      margin-top: auto;
+    }
+  }
+  &-uploader {
+    flex: 1.5;
+    border-left: 1px dashed #d4d4d4;
+    @include flex($dir: column);
+    display: none;
+    @include respond-to('tv') {
+      display: flex;
+    }
+    @include respond-to('desktop') {
+      display: flex;
+    }
+    &-avatar {
+      width: 60%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #e1e0e0;
+    }
+    &-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    &-misc {
+      @include flex();
+      &-single {
+        @include flex($dir: column);
+        padding: 0 10px;
+      }
+      &__tag {
+        color: #858583;
+        font-weight: bold;
+      }
+      &__number {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      &__divide {
+        border-right: 1px solid #d4d4d4;
+      }
+    }
+  }
+}

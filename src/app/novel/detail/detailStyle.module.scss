@@ -1,0 +1,27 @@
+.detail {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: grid;
+  @include respond-to('tv') {
+    grid-template-columns: 70% 30%;
+  }
+  @include respond-to('desktop') {
+    grid-template-columns: 65% 35%;
+  }
+  grid-template-rows: repeat(2fr);
+  grid-gap: 1.2rem 1.2rem;
+  &-overview {
+    @include respond-to('tv') {
+      grid-column-start: span 2;
+    }
+    @include respond-to('desktop') {
+      grid-column-start: span 2;
+    }
+  }
+  &-message,
+  &-expand {
+    @include flex($x: flex-start, $y: flex-start, $dir: column, $yGap: 1.2rem);
+  }
+}
