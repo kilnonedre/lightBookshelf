@@ -31,3 +31,19 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+
+:-webkit-full-screen {
+  background-color: #fafafa !important;
+}
+
+:-moz-full-screen {
+  background-color: #fafafa !important;
+}
+
+:-ms-fullscreen {
+  background-color: #fafafa !important;
+}
+
+:fullscreen {
+  background-color: #fafafa !important;
+}

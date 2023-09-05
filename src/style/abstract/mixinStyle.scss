@@ -26,3 +26,19 @@
   word-break: break-all;
   overflow: hidden;
 }
+
+// 全屏通用样式
+@mixin fullscreen() {
+  &:-webkit-full-screen {
+    @content;
+  }
+  &:-moz-full-screen {
+    @content;
+  }
+  &:-ms-fullscreen {
+    @content;
+  }
+  &:fullscreen {
+    @content;
+  }
+}

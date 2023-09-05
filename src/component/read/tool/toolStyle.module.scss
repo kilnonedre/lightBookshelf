@@ -1,0 +1,46 @@
+.tool {
+  position: absolute;
+  &--fullscreen {
+    position: fixed;
+  }
+  right: 1rem;
+  bottom: 1rem;
+  font-family: 'iconFont';
+  &--active {
+    .tool-button {
+      transform: rotate(0deg);
+    }
+    .tool-bar {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+  &-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 3.5rem;
+    font-size: 2rem;
+    transform: rotate(225deg);
+    transition: 0.4s;
+  }
+  &-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 0.4s;
+    &-item {
+      width: 2rem;
+      height: 2rem;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center;
+      line-height: 2rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

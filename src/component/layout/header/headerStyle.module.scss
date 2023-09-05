@@ -5,20 +5,13 @@
   z-index: 10;
   @include flex($x: flex-end);
   box-sizing: border-box;
-  &-logo {
-    height: 60%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    img {
-      cursor: pointer;
-      height: 100%;
-      aspect-ratio: 1/1;
-    }
-  }
   &-nav {
     font-family: 'iconFont';
     height: 100%;
-    @include flex();
+    width: 90%;
+    max-width: 1350px;
+    margin: 0 auto;
+    @include flex($x: flex-end);
     column-gap: 1.9rem;
     &-icon {
       font-size: 1.6rem;

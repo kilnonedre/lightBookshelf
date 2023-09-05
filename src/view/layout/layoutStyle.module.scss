@@ -40,6 +40,7 @@
       background-color: #fafafa;
       height: 100%;
       border-radius: 20px;
+      position: relative;
       @include flex($dir: column);
       &-child {
         overflow: auto;
