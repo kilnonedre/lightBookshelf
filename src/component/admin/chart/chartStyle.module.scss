@@ -1,0 +1,29 @@
+.chart {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  padding: 1.5rem 1.8rem;
+  font-weight: 900;
+  line {
+    display: none;
+  }
+  &-header {
+    @include flex($x: space-between);
+    margin-bottom: 2rem;
+    &-title {
+      font-size: 1.3rem;
+    }
+    &-trend {
+      font-family: 'iconFont';
+      margin-right: auto;
+      margin-left: 0.5rem;
+    }
+    &-interval {
+      @include flex($xGap: 0.5rem);
+      font-size: 1rem;
+      &-single {
+        cursor: pointer;
+      }
+    }
+  }
+}

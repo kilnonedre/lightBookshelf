@@ -11,21 +11,24 @@
     "pre-commit": "next lint --fix"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.0.22",
+    "@nextui-org/react": "^2.1.12",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@types/uuid": "^9.0.3",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
-    "framer-motion": "^10.16.0",
+    "framer-motion": "^10.16.4",
     "next": "13.4.18",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.66.0",
+    "recharts": "^2.8.0",
+    "sass": "^1.67.0",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",

@@ -96,7 +96,6 @@ const Header = () => {
             <div className={styles['header-nav-avatar']}></div>
           </DropdownTrigger>
           <DropdownMenu
-            aria-label="Single selection actions"
             disabledKeys={['information']}
             color="secondary"
             items={dropDownItemList}

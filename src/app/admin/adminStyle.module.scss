@@ -1,0 +1,13 @@
+.admin {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem 1rem;
+  margin-bottom: 2rem;
+  &-tabulation,
+  &-chart {
+    grid-column-start: span 3;
+  }
+}
